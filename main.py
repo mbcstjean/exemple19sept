@@ -18,7 +18,7 @@ path_width: float
 asphalt_needed: float
 
 
-# CODE LOGIC
+# CODE  LOGIC
 fountain_area = pi * FOUNTAIN_RADIUS ** 2  # Fountain area in square meters
 # Asphalt needed to build a path of 2 meters of width
 asphalt_needed = round(pi * (IDEAL_PATH_WIDTH + FOUNTAIN_RADIUS) ** 2 - fountain_area, 2)
