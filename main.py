@@ -2,7 +2,6 @@
 # Problem description : Calculate a path width around a fountain
 # Last modification on : September, 12, 2024
 # Known problems/bugs : 1- If user enter a string in the asphalt_in_truck variable, program won't work
-#                       2-
 # IMPORTATIONS
 from math import pi, sqrt
 from typing import Final
@@ -33,8 +32,9 @@ if asphalt_in_truck >= asphalt_needed:  # Check if we have more asphalt than req
     print(f"\nPath width with this amount of asphalt in the truck: {path_width} METERS \n\n "
           f"- For an ideal path of 2 meters - \nAsphalt needed for the ideal path: {asphalt_needed} SQUARE METERS\n"
           f"Asphalt left after path construction: {round(asphalt_in_truck - asphalt_needed, 2)} SQUARE METERS")
-    quit()  # Quit the program after printing the results
-
+    quit()
+# Quit the program after printing the results because we have more asphalt than needed, so we don't print
+# the next statement, which is for if we have less asphalt than required
 print(f"\nPath width with this amount of asphalt in the truck: {path_width} METERS \n\n - For an ideal path of 2 meters"
       f"- \nAsphalt needed for the ideal path: {asphalt_needed} SQUARE METERS\nAsphalt to add for path construction: "
       f"{round(asphalt_needed - asphalt_in_truck, 2)} SQUARE METERS")
